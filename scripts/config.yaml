@@ -1,0 +1,139 @@
+# =====================================================================
+# GAZZE KORPUSU — Scraping Konfigürasyonu
+# =====================================================================
+# Bu dosyayı düzenleyerek scraping davranışını değiştirebilirsiniz.
+# Tarihler ISO formatında (YYYY-MM-DD) olmalıdır.
+
+# ---------------------------------------------------------------------
+# 1. Tarih Aralığı (Gazze savaşı ilk altı ay)
+# ---------------------------------------------------------------------
+date_range:
+  start: "2023-10-07"
+  end:   "2024-04-07"
+
+# ---------------------------------------------------------------------
+# 2. Aktif Kaynaklar (yorum satırı yaparak devre dışı bırakabilirsiniz)
+# ---------------------------------------------------------------------
+# Geçerli değerler:
+#   aa         — Anadolu Ajansı EN+TR (lokal)
+#   sputnik    — Sputnik TR (anlatilaninotesi.com.tr) — lokal
+#   sputnik_en — Sputnik EN (sputnikglobe.com) — YALNIZCA GitHub Actions
+#                (Türkiye'den RTÜK SNI bloğu nedeniyle erişilemez)
+#   euronews   — Euronews EN+TR (lokal)
+sources:
+  - aa
+  - sputnik
+  - euronews
+  # - sputnik_en   # bu satırı sadece GitHub Actions config'inde aç
+
+# ---------------------------------------------------------------------
+# 3. Çıktı yolları (mutlak veya proje köküne göre relative)
+# ---------------------------------------------------------------------
+paths:
+  output_root: "../corpus"
+  log_dir:     "logs"
+
+# ---------------------------------------------------------------------
+# 4. Test/Çalıştırma Modu
+# ---------------------------------------------------------------------
+# test_mode: true → her kaynaktan max_per_source_test kadar haber çeker
+# dry_run:   true → fetch yapar ama JSON yazmaz (sadece doğrulama)
+runtime:
+  test_mode: true
+  dry_run:   false
+  max_per_source_test: 5
+  max_per_source: null   # null = sınırsız (tam scraping)
+
+# ---------------------------------------------------------------------
+# 5. HTTP Davranışı
+# ---------------------------------------------------------------------
+http:
+  user_agent: "GazzeKorpus-Academic/1.0 (Afyon Kocatepe University; Dr. Evren Barut; evrenbarut.akademik@gmail.com; +https://github.com/evrenbarut/gazze-korpusu)"
+  timeout_seconds: 15
+  retry_attempts: 3
+  retry_backoff_seconds: [5, 15, 45]   # exponential backoff
+  rate_limit_per_source:
+    aa:       2.0    # GDELT API + AA fetch arası saniye
+    sputnik:  1.5
+    euronews: 2.0
+  gdelt_rate_limit: 3.0   # GDELT 429 hatası riskine karşı
+
+# ---------------------------------------------------------------------
+# 6. İçerik Filtreleri (varsayılan eşikler — kaynak override edebilir)
+# ---------------------------------------------------------------------
+content:
+  min_word_count: 200          # Bunun altındaki haberler atılır (navigasyon HTML riski)
+  max_word_count: 15000        # Tek makale için üst sınır (anormal değerleri elemek için)
+
+# ---------------------------------------------------------------------
+# 6b. Kaynak-spesifik override'lar
+# ---------------------------------------------------------------------
+# Akademik gerekçe: editoryal stilleri farklı haber kuruluşları için
+# tek-tip eşik kullanmak hatalıdır. AA ve Euronews uzun-form (analiz/derleme)
+# yapısı; Sputnik breaking-news yapısıyla daha kısa makaleler üretir.
+# Bu kalibrasyon hem HTML parse artefaktlarını eler hem de meşru kısa-form
+# ideolojik içeriği dışlamaz.
+source_options:
+  aa:
+    min_word_count: 200
+  euronews:
+    min_word_count: 200
+  sputnik:           # TR mirror (anlatilaninotesi.com.tr)
+    min_word_count: 100
+  sputnik_en:        # GitHub Actions üzerinden EN
+    min_word_count: 100
+
+# ---------------------------------------------------------------------
+# 7. Konu Filtresi — Anahtar Kelimeler (askeri + insani + diplomasi)
+# ---------------------------------------------------------------------
+# Başlık veya metinde EN AZ BİR keyword geçmeli.
+topic_keywords:
+  en:
+    - gaza
+    - hamas
+    - israel
+    - israeli
+    - palestin   # palestine, palestinian, palestinians
+    - rafah
+    - khan younis
+    - al-shifa
+    - shifa hospital
+    - al-ahli
+    - hostage
+    - ceasefire
+    - icj
+    - genocide
+    - west bank
+    - idf
+    - netanyahu
+    - sinwar
+    - haniyeh
+    - flour massacre
+  tr:
+    - gazze
+    - hamas
+    - israil
+    - filistin
+    - refah
+    - han yunus
+    - şifa
+    - el-ahli
+    - el ahli
+    - rehine
+    - ateşkes
+    - uad           # Uluslararası Adalet Divanı
+    - soykırım
+    - batı şeria
+    - netanyahu
+    - sinvar
+    - heniyye
+    - un kamyonu
+    - katliam
+
+# ---------------------------------------------------------------------
+# 8. Eşleştirme (candidate_pair_id) Parametreleri
+# ---------------------------------------------------------------------
+pair_matching:
+  enabled: true
+  date_window_days: 1          # +/- N gün eşleşme penceresi
+  similarity_threshold: 0.30   # candidate aşaması — adım 2.4'te yeniden filtrelenecek

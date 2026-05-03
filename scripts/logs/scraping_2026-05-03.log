@@ -1,0 +1,2134 @@
+2026-05-03 16:12:22 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 16:12:22 | INFO    | gazze_korpus | Logger başlatıldı | Log dosyası: C:\GazzeKorpus\scripts\logs\scraping_2026-05-03.log
+2026-05-03 16:12:22 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 16:12:22 | INFO    | gazze_korpus | Konfigürasyon: C:\GazzeKorpus\scripts\config.yaml
+2026-05-03 16:12:22 | INFO    | gazze_korpus | Çıktı dizini : C:\GazzeKorpus\corpus
+2026-05-03 16:12:22 | INFO    | gazze_korpus | Test modu    : True
+2026-05-03 16:12:22 | INFO    | gazze_korpus | Dry run      : False
+2026-05-03 16:12:22 | INFO    | gazze_korpus | Tarih aralığı: 2023-10-07 → 2024-04-07
+2026-05-03 16:12:22 | INFO    | gazze_korpus | Aktif kaynaklar: aa, sputnik, euronews
+2026-05-03 16:12:22 | INFO    | gazze_korpus | >>> aa scraper başlıyor (test_mode=True)
+2026-05-03 16:12:47 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/who-chief-urges-israel-to-reverse-al-awda-hospital-evacuation-demand/3019234 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:12:49 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/germany-does-not-support-unicef-call-for-gaza-cease-fire/3019169 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:12:52 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/red-cross-warns-humanitarian-groups-wont-be-able-to-assist-massive-displacement-in-gaza/3018881 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:12:52 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/europe/putin-says-karabakh-irrevocably-became-part-of-azerbaijan-in-2022/3018909
+2026-05-03 16:12:55 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/gaza-faces-collective-punishment-by-israel-doctors-without-borders/3018693 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:01 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/russia-ukraine-war/not-in-short-term-but-gaza-crisis-could-impact-ukraine-war-down-the-line-experts/3018254 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:04 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/world/israeli-warplanes-carry-out-overnight-raids-in-gaza-destroying-12-buildings-in-a-minute/3017979 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:08 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/new-fronts-possible-if-israeli-aggression-on-gaza-continues-iran/3017938 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:11 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israels-security-minister-distributes-assault-rifles-to-civilians/3017836 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:15 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-palestine-conflict-latest-updates/3017907 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:19 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/world/al-aqsa-mosque-almost-empty-of-worshippers-as-israeli-police-restrict-entry/3018217 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:22 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-s-warning-to-locals-in-northern-gaza-strip-psychological-war-gaza-government/3017882 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:25 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/turkish-emirati-top-diplomats-discuss-humanitarian-situation-in-gaza-amid-ongoing-conflict/3017974 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:25 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/americas/canada-airlifts-130-nationals-from-tel-aviv/3017553
+2026-05-03 16:13:27 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/uk-to-deploy-aircraft-royal-navy-ships-to-eastern-mediterranean-to-support-israel/3017551 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:39 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-s-information-minister-resigns/3017771 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:44 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-used-white-phosphorus-in-military-operation-gaza-lebanon-hrw/3017767 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:46 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/americas/blinken-extends-israel-trip-to-five-arab-nations-/3017670 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:49 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-s-army-chief-vows-gaza-will-never-be-the-same-again-/3017376 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:51 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/greek-security-council-reviews-developments-regarding-israel-palestine-conflict/3017519 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:54 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/world/un-calls-for-allowing-delivery-of-humanitarian-assistance-to-blockaded-gaza/3017009 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:13:57 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/nato-warns-nations-groups-hostile-towards-israel-seizing-on-gaza-clashes/3017270 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:00 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/hospitals-risk-turning-into-morgues-without-electricity-in-gaza-red-cross/3017123 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:03 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israeli-death-toll-in-palestine-conflict-rises-to-1-300/3016589 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:06 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-targets-syrian-airports-in-damascus-aleppo/3017113 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:09 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/un-says-more-than-338-000-palestinians-displaced-in-gaza/3016404 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:12 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/palestinian-death-toll-from-israeli-attacks-on-gaza-tops-1-400/3017229 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:15 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/significant-part-of-palestinian-population-in-gaza-being-wiped-off-un-official/3017093 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:18 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-confirms-97-being-held-hostage-by-hamas/3016994 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:21 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/ties-with-afghanistan-should-not-be-hostage-to-taliban-recognition-russian-president-s-envoy/3017031 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:24 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/turkish-uae-presidents-discuss-developments-in-israel-palestine-conflict/3016951 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:27 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/unrwa-sheltering-over-220-000-palestinians-at-88-of-its-schools-in-gaza/3016380 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:31 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/americas/-netanyahu-let-us-down-trump-criticizes-israeli-premier-intelligence/3016617 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:33 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/world/hamas-frees-israeli-woman-her-2-children-from-captivity/3016279 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:37 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/3-268-israelis-evacuated-to-hospitals-since-start-of-israel-palestine-conflict-ministry/3016357 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:39 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/world/hamas-frees-israeli-woman-her-two-children-from-captivity/3016279 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:43 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/german-police-ban-palestinian-solidarity-rallies-in-berlin/3015651 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:47 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/americas/us-actively-working-to-establish-safe-corridor-for-gaza-civilians-white-house/3016163 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:47 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/americas/state-department-clarifies-deletion-of-blinkens-post-encouraging-cease-fire/3014880
+2026-05-03 16:14:52 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/world/who-repeats-its-call-for-end-to-hostilities-in-israel-gaza/3014894 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:56 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israeli-army-says-it-does-not-have-confirmation-about-allegations-that-hamas-beheaded-babies-/3014787 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:14:59 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israeli-airstrikes-displace-200-000-palestinians-in-gaza-un/3014643 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:02 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/palestine-accuses-israel-of-using-white-phosphorus-bombs-in-gaza/3014705 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:06 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/palestinian-death-toll-from-israeli-airstrikes-in-gaza-surges-to-900/3014824 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:06 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/politics/turkiye-calls-on-all-actors-in-region-to-make-serious-push-for-mideast-peace/3014611
+2026-05-03 16:15:12 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/1-200-israelis-killed-in-hamas-attack-over-200-taken-captive-report/3014750 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:15 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/turkish-russian-leaders-discuss-worrying-israeli-palestinian-conflict/3014742 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:18 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/eu-s-foreign-policy-chief-urges-israel-to-use-its-right-to-self-defense-in-accordance-with-intl-law/3014809 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:22 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/turkiye-condemns-attacks-on-civilians-in-palestine-israel-conflict/3014698 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:25 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/palestinian-death-toll-from-israeli-airstrikes-in-gaza-nears-800/3014196 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:29 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israeli-army-says-deputy-commander-of-its-300th-brigade-killed-on-border-with-lebanon/3013517 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:32 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/world/suspension-of-financial-aid-to-palestine-would-damage-eu-interests-in-region-borrell/3013478 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:36 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/many-foreign-nationals-missing-presumed-dead-or-feeling-impact-of-latest-israeli-palestinian-conflict/3013457 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:38 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/death-toll-of-palestinians-killed-by-israeli-army-in-gaza-rises-to-704-health-ministry/3013513 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:41 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-has-cut-off-water-supply-to-gaza-strip-energy-minister/3013527 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:44 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/unrwa-says-it-is-sheltering-137-000-people-at-its-schools-in-gaza/3013540 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:44 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/europe/london-mayor-says-no-room-for-hate-after-kosher-restaurants-glass-door-smashed/3012691
+2026-05-03 16:15:47 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/2-palestinian-journalists-killed-in-israeli-bombing-of-gaza/3013542 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:50 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/americas/biden-says-at-least-11-american-citizens-killed-during-israel-conflict/3013459 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:53 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israeli-airstrikes-cut-off-internet-communications-in-large-areas-of-gaza-strip-/3013161 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:56 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/europe/eu-foreign-ministers-to-hold-emergency-meeting-over-developments-in-israel-gaza-strip/3012532 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:15:56 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/asia-pacific/russian-ruble-plunges-to-18-month-low-against-us-dollar/3012778
+2026-05-03 16:15:56 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/economy/global-markets-follow-negative-course-amid-growing-geopolitical-risks/3012555
+2026-05-03 16:15:59 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/spain-worried-that-israel-palestine-conflict-could-spill-over-to-other-countries/3012616 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:03 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/32-palestinians-killed-as-israel-launches-fresh-airstrikes-on-gaza/3012015 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:05 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/iran-and-iraq-s-foreign-ministers-call-for-special-oic-session-on-palestine/3012072 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:09 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israeli-death-toll-from-hamas-attack-estimated-to-top-1-000-report/3012040 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:11 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/4-israeli-soldiers-wounded-in-friendly-fire-incident-near-lebanese-border/3012017 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:15 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/americas/additional-military-assistance-to-israel-on-its-way-biden-tells-netanyahu/3011871 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:18 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/turkish-president-erdogan-calls-for-independent-geographically-integrated-palestinian-state-/3011762 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:21 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/at-least-313-palestinians-killed-in-israeli-attacks-so-far-gaza-health-ministry/3011303 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:24 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israeli-warplanes-keep-bombing-targets-in-gaza/3011334 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:26 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/latest-developments-in-israel-palestine-conflict/3011422 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:30 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/family-of-6-killed-in-israeli-airstrikes-in-gaza/3011645 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:32 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/asia-pacific/malaysia-expresses-solidarity-with-palestinians/3011627 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:36 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/shutdown-protesting-israeli-air-raids-paralyzes-life-in-west-bank-east-jerusalem/3011387 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:38 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/israel-instructs-diplomats-abroad-to-stay-at-home-/3011591 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:41 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/africa/south-africa-calls-for-cessation-of-hostilities-between-israel-palestine/3011628 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:45 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/algeria-condemns-brutal-israeli-airstrikes-on-gaza/3010959 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:48 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/300-israelis-killed-in-military-escalation-with-hamas/3010803 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:51 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/gaza-health-ministry-says-at-least-232-palestinians-killed-in-israeli-airstrikes/3010683 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:54 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/world/un-chief-condemns-hamas-attacks-on-israel/3010910 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:56 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/at-least-100-israelis-killed-in-military-escalation-with-gaza/3010803 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:16:59 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/turkiye-deeply-concerned-over-violence-in-israel-and-palestine/3010773 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:17:05 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/hamas-leader-says-operation-heroic-epic-in-response-to-aggression-against-al-aqsa/3010615 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:17:08 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/qatar-holds-israel-responsible-for-escalation-in-gaza/3010716 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:17:11 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/premier-netanyahu-says-israel-at-war-/3010318 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:17:16 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/en/middle-east/intense-rocket-salvoes-fired-from-gaza-toward-israel/3009882 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:17:21 | INFO    | gazze_korpus | GDELT 429 — 30 saniye bekleyip tekrar deneniyor
+2026-05-03 16:18:03 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/the-times-israilin-bebek-iddialari-haberinde-gazzeli-yarali-cocuklarin-fotografini-kullandi/3018980 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:06 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/iskocya-basbakaninin-gazzede-mahsur-kalan-kayinvalidesi-insanlik-nerede/3018715 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:10 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israilin-gazzeye-saldirilari-siddetlenerek-devam-ediyor/3018448 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:14 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/filistinli-yetkililer-gazzedeki-hastanelerin-vahim-durumda-oldugunu-acikladi/3018414 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:17 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/bm-israilin-gazzenin-kuzeyindeki-1-milyon-sivile-24-saat-tanimasi-dehset-verici/3018398 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:19 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/bati-medyasi-yalan-haberlerle-kamuoyunu-gazzedeki-katliama-karsi-duyarsizlastiriyor/3018325 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:19 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/israilde-acil-durum-hukumeti-kuruldu/3017784
+2026-05-03 16:18:22 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/uluslararasi-kizilhac-komitesi-gazzede-2-milyondan-fazla-kisi-temel-ihtiyaclar-su-ve-elektrikten-yoksun/3017752 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:27 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/insan-haklari-izleme-orgutu-israilin-gazze-ve-lubnanda-beyaz-fosfor-kullandigini-bildirdi/3017757 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:27 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/israil-bebek-iddialarini-desteklemek-icin-bebek-cesetleri-fotograflari-paylasti/3017732
+2026-05-03 16:18:27 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/ab-xin-icerik-kurallarina-uyumunu-sorusturuyor/3017681
+2026-05-03 16:18:31 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israil-gucleri-bati-seriada-ogluyla-seyahat-eden-filistinli-anneyi-oldurdu/3017636 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:34 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israil-gazzeli-sivillerin-toplanmasini-istedigi-noktalari-da-vuruyor/3017358 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:34 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/nato-muttefikleri-israilden-orantili-karsilik-bekliyor/3017265
+2026-05-03 16:18:37 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israil-yanlisi-eylemlere-izin-veren-avrupa-ulkeleri-filistinle-dayanisma-gosterilerini-yasakliyor/3016620 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:40 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/abd-israil-ve-isgal-altindaki-bati-seria-icin-seyahat-uyarisini-3-seviyeye-cikardi/3016529 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:40 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/nato-ulkelerinin-savunma-bakanlari-orta-dogu-ve-kosovayi-degerlendirecek/3016515
+2026-05-03 16:18:43 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/-gazzeden-duzenlenen-saldirilarda-olen-israillilerin-sayisi-1300e-yukseldi/3016364 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:43 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/ekonomi/kuresel-piyasalarda-gozler-abdnin-enflasyon-verilerine-cevrildi/3016441
+2026-05-03 16:18:47 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israilin-gazze-seridine-hava-saldirilari-suruyor/3014992 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:47 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/gundem/lubnan-ve-orta-afrika-cumhuriyeti-tezkeresi-tbmm-genel-kurulunda-kabul-edildi/3016119
+2026-05-03 16:18:51 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israilde-netanyahu-hukumetine-yonelik-elestiriler-yukseliyor/3015901 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:55 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/cin-in-orta-dogudaki-yeni-rolu-israil-filistin-catismasinin-sinamasiyla-karsi-karsiya/3015579 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:18:55 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/ekonomi/borsa-gune-yukselisle-basladi/3015083
+2026-05-03 16:18:55 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/ekonomi/kuresel-piyasalarda-pozitif-seyir-suruyor/3015013
+2026-05-03 16:18:58 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/gazzenin-batisinda-yasayanlar-bombardimandan-kacarak-evlerinden-ayriliyor/3014964 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:01 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/gazze-sivil-savunmasi-enkazin-coklugundan-dolayi-ekiplerimiz-yetersiz-kaliyor-/3014907 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:04 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/dso-israil-ve-gazze-seridindeki-catismalarin-sona-ermesi-cagrisini-yineledi/3014881 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:04 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/israil-ordusu-bebeklere-iliskin-iddialar-bizde-bunun-teyidi-yok/3014877
+2026-05-03 16:19:04 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/abd-israilin-demir-kubbesini-guclendirmek-icin-desteklerini-arttirdigini-bildirdi/3014874
+2026-05-03 16:19:04 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/israil-ordusu-kassam-tugaylari-sozcusu-ebu-ubeydenin-evinin-vuruldugunu-iddia-etti/3014895
+2026-05-03 16:19:04 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/biden-abd-israilin-arkasindadir/3014813
+2026-05-03 16:19:07 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/filistin-israil-gazzeye-duzenledigi-saldirilarda-fosfor-bombasi-kullandi/3014815 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:10 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/filistin-devlet-baskani-abbas-ve-libya-basbakani-dibeybe-filistindeki-gelismeleri-gorustu/3014786 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:12 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/filistin-gazzeye-gida-ve-tibbi-yardim-girisi-icin-guvenli-koridor-istedi/3014775 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:12 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/bilim-teknoloji/ab-yasa-disi-iceriklerin-xten-kaldirilmasi-icin-elon-muska-24-saat-sure-verdi/3014793
+2026-05-03 16:19:16 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/bm-israil-filistin-catismasinda-onceligimiz-daha-fazla-sivilin-zarar-gormesini-engellemek/3014771 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:16 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/abd-disisleri-bakani-blinken-israilli-mevkidasi-cohen-ile-gorusmesinde-destegini-yineledi/3013636
+2026-05-03 16:19:16 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/analiz/gorus-arap-dunyasi-7-ekim-saldirilarina-ne-cevap-verdi/3013592
+2026-05-03 16:19:16 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/ekonomi/borsa-gune-yukselisle-basladi/3013646
+2026-05-03 16:19:16 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/beyaz-saray-abdnin-israile-kara-birligi-gonderme-gibi-bir-niyeti-yok/3013640
+2026-05-03 16:19:16 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/-haberici/israil-lubnandan-ulkeye-sizan-kisilerle-cikan-catismalarda-bir-subayimiz-oldu/3013529
+2026-05-03 16:19:16 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/new-york-merkezli-orgut-israilli-bakanin-sozlerini-savas-sucuna-cagri-olarak-niteledi/3013503
+2026-05-03 16:19:23 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israilin-gazzeye-duzenledigi-saldirilarda-143u-cocuk-704-kisi-hayatini-kaybetti/3013382 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:27 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israil-elektrigin-ardindan-gazze-seridine-su-akisini-da-kesti/3013482 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:30 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/abnin-filistinlilere-insani-yardimlari-surecek/3013206 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:30 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/avrupada-gaz-fiyatlari-jeopolitik-gerilimin-etkisiyle-yuzde-12-5-yukseldi/3013112
+2026-05-03 16:19:34 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/abd-disisleri-bakani-blinken-ateskes-cagrisi-yaptigi-sosyal-medya-paylasimini-sildi/3013038 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:34 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/gundem/cumhurbaskanligi-iletisim-baskanligi-dezenformasyon-bulteninin-93-sayisini-yayimladi/3012909
+2026-05-03 16:19:34 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/iran-israile-saldirinin-arkasinda-olduklari-yonundeki-iddiaya-tepki-gosterdi/3012420
+2026-05-03 16:19:34 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/ekonomi/artan-jeopolitik-riskler-kuresel-piyasalarda-guvenli-liman-arayisini-artiriyor/3012462
+2026-05-03 16:19:37 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/fransada-filistine-destek-gosterisine-izin-verilmedi/3012426 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:40 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/kremlin-israil-ve-filistindeki-catisma-tirmanma-ve-yayilma-ihtimali-tasiyor/3012480 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:44 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/israil-savunma-bakani-gallant-gazze-tamamen-ablukaya-alinacak/3012491 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:44 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/abd-israilin-guvenligine-destek-vermeye-kararliyiz-/3012206
+2026-05-03 16:19:47 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/gazzeden-baslatilan-aksa-tufani-saldirisi-israilde-istihbarat-zafiyeti-tartismalarina-neden-oldu/3012309 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:50 | ERROR   | gazze_korpus | PARSE FAIL [aa] https://www.aa.com.tr/tr/dunya/bm-filistinli-multecilere-yardim-ajansi-gazzede-yaklasik-74-bin-filistinli-okullarimiza-sigindi/3012210 | 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\GazzeKorpus\scripts\scrapers\base.py", line 192, in process_article
+    article = self.parse(url, html, lang)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 104, in parse
+    body = self._extract_body(soup)
+  File "C:\GazzeKorpus\scripts\scrapers\aa.py", line 183, in _extract_body
+    strip_noise(soup.body, extra_substrings=("etiket", "tag-", "ilgili"))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\GazzeKorpus\scripts\utils\html_cleaner.py", line 80, in strip_noise
+    " ".join(element.get("class", [])),
+             ~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\evren\AppData\Local\Programs\Python\Python314\Lib\site-packages\bs4\element.py", line 2366, in get
+    return self.attrs.get(key, default)
+           ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2026-05-03 16:19:50 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/abd-israile-destek-amaciyla-ucak-gemi-filosunu-dogu-akdenize-gonderiyor/3011908
+2026-05-03 16:19:50 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/tr/dunya/israil-cumhurbaskani-boylesi-bir-savas-goz-acip-kapayinca-kadar-bitmez/3011860
+2026-05-03 16:21:16 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 16:21:16 | INFO    | gazze_korpus | Logger başlatıldı | Log dosyası: C:\GazzeKorpus\scripts\logs\scraping_2026-05-03.log
+2026-05-03 16:21:16 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 16:21:16 | INFO    | gazze_korpus | Konfigürasyon: C:\GazzeKorpus\scripts\config.yaml
+2026-05-03 16:21:16 | INFO    | gazze_korpus | Çıktı dizini : C:\GazzeKorpus\corpus
+2026-05-03 16:21:16 | INFO    | gazze_korpus | Test modu    : True
+2026-05-03 16:21:16 | INFO    | gazze_korpus | Dry run      : False
+2026-05-03 16:21:16 | INFO    | gazze_korpus | Tarih araligi: 2023-10-07 -> 2024-04-07
+2026-05-03 16:21:16 | INFO    | gazze_korpus | Aktif kaynaklar: aa, sputnik, euronews
+2026-05-03 16:21:16 | INFO    | gazze_korpus | >>> aa scraper başlıyor (test_mode=True)
+2026-05-03 16:21:25 | INFO    | gazze_korpus | [saved aa/en 472w] WHO chief urges Israel to reverse Al Awda Hospital evacuatio | https://www.aa.com.tr/en/europe/who-chief-urges-israel-to-reverse-al-awda-hospital-evacuation-demand/3019234
+2026-05-03 16:21:28 | INFO    | gazze_korpus | [saved aa/en 372w] Germany does not support UNICEF call for Gaza cease-fire | https://www.aa.com.tr/en/europe/germany-does-not-support-unicef-call-for-gaza-cease-fire/3019169
+2026-05-03 16:21:32 | INFO    | gazze_korpus | [saved aa/en 330w] Red Cross warns humanitarian groups won't be able to assist  | https://www.aa.com.tr/en/europe/red-cross-warns-humanitarian-groups-wont-be-able-to-assist-massive-displacement-in-gaza/3018881
+2026-05-03 16:21:32 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/europe/putin-says-karabakh-irrevocably-became-part-of-azerbaijan-in-2022/3018909
+2026-05-03 16:21:35 | INFO    | gazze_korpus | [saved aa/en 370w] Gaza faces collective punishment by Israel: Doctors Without  | https://www.aa.com.tr/en/europe/gaza-faces-collective-punishment-by-israel-doctors-without-borders/3018693
+2026-05-03 16:21:38 | INFO    | gazze_korpus | [saved aa/en 1088w] Not in short term but Gaza crisis could impact Ukraine war d | https://www.aa.com.tr/en/russia-ukraine-war/not-in-short-term-but-gaza-crisis-could-impact-ukraine-war-down-the-line-experts/3018254
+2026-05-03 16:21:38 | INFO    | gazze_korpus | [aa] max_articles limit (5) doldu — durdur
+2026-05-03 16:21:38 | INFO    | gazze_korpus | <<< aa scraper bitti — bu çalıştırmada 5 haber kaydedildi
+2026-05-03 16:21:38 | INFO    | gazze_korpus | >>> sputnik scraper başlıyor (test_mode=True)
+2026-05-03 17:05:19 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 17:05:19 | INFO    | gazze_korpus | Logger başlatıldı | Log dosyası: C:\GazzeKorpus\scripts\logs\scraping_2026-05-03.log
+2026-05-03 17:05:19 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 17:05:19 | INFO    | gazze_korpus | Konfigürasyon: C:\GazzeKorpus\scripts\config.yaml
+2026-05-03 17:05:19 | INFO    | gazze_korpus | Çıktı dizini : C:\GazzeKorpus\corpus
+2026-05-03 17:05:19 | INFO    | gazze_korpus | Test modu    : True
+2026-05-03 17:05:19 | INFO    | gazze_korpus | Dry run      : False
+2026-05-03 17:05:19 | INFO    | gazze_korpus | Tarih araligi: 2023-10-07 -> 2024-04-07
+2026-05-03 17:05:19 | INFO    | gazze_korpus | Aktif kaynaklar: aa, sputnik, euronews
+2026-05-03 17:05:19 | INFO    | gazze_korpus | >>> aa scraper başlıyor (test_mode=True)
+2026-05-03 17:05:31 | INFO    | gazze_korpus | GDELT 429 — 30 saniye bekleyip tekrar deneniyor
+2026-05-03 17:06:10 | INFO    | gazze_korpus | GDELT 429 — 30 saniye bekleyip tekrar deneniyor
+2026-05-03 17:07:27 | INFO    | gazze_korpus | [saved aa/en 479w] WHO chief urges Israel to reverse Al Awda Hospital evacuatio | https://www.aa.com.tr/en/europe/who-chief-urges-israel-to-reverse-al-awda-hospital-evacuation-demand/3019234
+2026-05-03 17:07:30 | INFO    | gazze_korpus | [saved aa/en 379w] Germany does not support UNICEF call for Gaza cease-fire | https://www.aa.com.tr/en/europe/germany-does-not-support-unicef-call-for-gaza-cease-fire/3019169
+2026-05-03 17:07:33 | INFO    | gazze_korpus | [saved aa/en 337w] Red Cross warns humanitarian groups won't be able to assist  | https://www.aa.com.tr/en/europe/red-cross-warns-humanitarian-groups-wont-be-able-to-assist-massive-displacement-in-gaza/3018881
+2026-05-03 17:07:33 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/europe/putin-says-karabakh-irrevocably-became-part-of-azerbaijan-in-2022/3018909
+2026-05-03 17:07:36 | INFO    | gazze_korpus | [saved aa/en 377w] Gaza faces collective punishment by Israel: Doctors Without  | https://www.aa.com.tr/en/europe/gaza-faces-collective-punishment-by-israel-doctors-without-borders/3018693
+2026-05-03 17:07:39 | INFO    | gazze_korpus | [saved aa/en 1099w] Not in short term but Gaza crisis could impact Ukraine war d | https://www.aa.com.tr/en/russia-ukraine-war/not-in-short-term-but-gaza-crisis-could-impact-ukraine-war-down-the-line-experts/3018254
+2026-05-03 17:07:39 | INFO    | gazze_korpus | [aa] max_articles limit (5) doldu — durdur
+2026-05-03 17:07:39 | INFO    | gazze_korpus | <<< aa scraper bitti — bu çalıştırmada 5 haber kaydedildi
+2026-05-03 17:07:39 | INFO    | gazze_korpus | >>> sputnik scraper başlıyor (test_mode=True)
+2026-05-03 17:07:45 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076133500.html
+2026-05-03 17:07:48 | INFO    | gazze_korpus | [skip-short 26w] sputnik | https://anlatilaninotesi.com.tr/20231007/rus-buyukelci-filistin-israil-catismasinin-onumuzdeki-gunlerde-cozume-kavusmasi-pek-olasi-degil-1076130276.html
+2026-05-03 17:07:53 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076132934.html
+2026-05-03 17:07:57 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076132734.html
+2026-05-03 17:08:00 | INFO    | gazze_korpus | [skip-short 92w] sputnik | https://anlatilaninotesi.com.tr/20231007/mahmud-abbas-israilin-eylemleri-durdurulmali-1076132338.html
+2026-05-03 17:08:02 | INFO    | gazze_korpus | [skip-short 22w] sputnik | https://anlatilaninotesi.com.tr/20231007/prof-dr-sambur-batililar-israil-filistin-sorunu-hep-israil-merkezli-olarak-degerlendirmislerdir-1076131586.html
+2026-05-03 17:08:05 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076132077.html
+2026-05-03 17:08:07 | INFO    | gazze_korpus | [skip-short 184w] sputnik | https://anlatilaninotesi.com.tr/20231007/netanyahu-tum-askeri-gucumuzu-kullanacagiz-1076131554.html
+2026-05-03 17:08:10 | INFO    | gazze_korpus | [saved sputnik/tr 241w] Türkiye'nin çeşitli kentlerinde Filistinlilere destek göster | https://anlatilaninotesi.com.tr/20231007/turkiyenin-cesitli-kentlerinde-filistinlilere-destek-gosterisi-1076131380.html
+2026-05-03 17:08:12 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231007/bassavciliktan-sancaktepede-3-kardesin-olumune-iliskin-sorusturmayla-ilgili-aciklama-1076130182.html
+2026-05-03 17:08:14 | INFO    | gazze_korpus | [skip-short 193w] sputnik | https://anlatilaninotesi.com.tr/20231007/biden-tam-olarak-israile-destek-veriyoruz-nokta-1076130385.html
+2026-05-03 17:08:17 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076129949.html
+2026-05-03 17:08:19 | INFO    | gazze_korpus | [skip-short 41w] sputnik | https://anlatilaninotesi.com.tr/20231007/ermenistan-filistinliler-ve-israil-arasinda-yasanan-siddet-olaylarindan-dolayi-sok-icindeyiz-1076129325.html
+2026-05-03 17:08:22 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076129695.html
+2026-05-03 17:08:24 | INFO    | gazze_korpus | [skip-short 24w] sputnik | https://anlatilaninotesi.com.tr/20231007/israil-savunma-bakani-gazze-seridindeki-operasyonlari-genisletmeye-haziriz-1076128341.html
+2026-05-03 17:08:27 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076129081.html
+2026-05-03 17:08:29 | INFO    | gazze_korpus | [skip-short 169w] sputnik | https://anlatilaninotesi.com.tr/20231007/ak-partide-yeni-myk-belli-oldu-1076128825.html
+2026-05-03 17:08:31 | INFO    | gazze_korpus | [skip-short 70w] sputnik | https://anlatilaninotesi.com.tr/20231007/rusya-disisleri-bakanligi-israildeki-catismanin-tirmanmasindan-endise-duyuyoruz-1076128625.html
+2026-05-03 17:08:34 | INFO    | gazze_korpus | [skip-short 31w] sputnik | https://anlatilaninotesi.com.tr/20231007/israil-muhalefeti-netanyahuya-acil-durum-hukumeti-kurmasini-onerdi-1076127389.html
+2026-05-03 17:08:36 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076128016.html
+2026-05-03 17:08:44 | INFO    | gazze_korpus | [skip-short 50w] sputnik | https://anlatilaninotesi.com.tr/20231008/denizlispor-taraftar-grubu-otobusune-silahli-saldiri-1076152125.html
+2026-05-03 17:08:47 | INFO    | gazze_korpus | [skip-short 62w] sputnik | https://anlatilaninotesi.com.tr/20231008/yangin-tren-yoluna-sicradi-uluslararasi-lojistik-tren-seferi-durdu-1076151853.html
+2026-05-03 17:08:49 | INFO    | gazze_korpus | [skip-short 50w] sputnik | https://anlatilaninotesi.com.tr/20231008/bakan-fidan-birlesik-arap-emirlikleri-disisleri-bakani-al-nahyan-ile-gorustu-1076151581.html
+2026-05-03 17:08:52 | INFO    | gazze_korpus | [skip-short 62w] sputnik | https://anlatilaninotesi.com.tr/20231008/israilde-en-az-10-nepalli-universite-ogrencisi-oldu-1076151370.html
+2026-05-03 17:08:55 | INFO    | gazze_korpus | [skip-short 183w] sputnik | https://anlatilaninotesi.com.tr/20231008/msbden-operasyon-aciklamasi-petrol-tesisi-ile-siginaklardan-olusan-6-hedef-imha-edilmistir-1076151027.html
+2026-05-03 17:08:58 | INFO    | gazze_korpus | [skip-short 92w] sputnik | https://anlatilaninotesi.com.tr/20231008/baskasina-ait-villaya-girdi-hirsiz-degilim-uyumaya-geldim-1076150900.html
+2026-05-03 17:09:00 | INFO    | gazze_korpus | [skip-short 176w] sputnik | https://anlatilaninotesi.com.tr/20231008/uefadan-israil-karari-1076150538.html
+2026-05-03 17:09:03 | INFO    | gazze_korpus | [skip-short 20w] sputnik | https://anlatilaninotesi.com.tr/20231008/emeklilere-ikramiye-ne-zaman-verilecek-1076150421.html
+2026-05-03 17:09:06 | INFO    | gazze_korpus | [skip-short 118w] sputnik | https://anlatilaninotesi.com.tr/20231008/rusya-savunma-bakanligi-ukrayna-ordusunun-tum-saldirilari-puskurtuldu-1076150107.html
+2026-05-03 17:09:08 | INFO    | gazze_korpus | [skip-short 41w] sputnik | https://anlatilaninotesi.com.tr/20231008/abd-temsilciler-meclisi-uyesi-israile-saldirida-kullanilan-silah-ukraynadan-gelmis-olabilir---1076150007.html
+2026-05-03 17:09:11 | INFO    | gazze_korpus | [skip-short 25w] sputnik | https://anlatilaninotesi.com.tr/20231008/cumhuriyet-tarihinin-ilk-kilisesi-torenle-acildi-1076149813.html
+2026-05-03 17:09:13 | INFO    | gazze_korpus | [skip-short 19w] sputnik | https://anlatilaninotesi.com.tr/20231008/fenerbahce-galibiyet-serisini-surduruyor-ligde-8-toplamda-16-mac-1076149516.html
+2026-05-03 17:09:16 | INFO    | gazze_korpus | [skip-short 91w] sputnik | https://anlatilaninotesi.com.tr/20231008/turkiye-macinin-aday-kadrosundaydi-milli-takimi-birakti-1076149161.html
+2026-05-03 17:09:18 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231008/1076149127.html
+2026-05-03 17:09:21 | INFO    | gazze_korpus | [skip-short 56w] sputnik | https://anlatilaninotesi.com.tr/20231008/polonya-devlet-baskani-duda-israildeki-durumun-ciddiyeti-abartmamali-ilk-degil-1076148840.html
+2026-05-03 17:09:23 | INFO    | gazze_korpus | [skip-short 74w] sputnik | https://anlatilaninotesi.com.tr/20231008/israilli-sanatci-riff-cohenin-istanbul-konseri-iptal-edildi-1076148461.html
+2026-05-03 17:09:26 | INFO    | gazze_korpus | [skip-short 67w] sputnik | https://anlatilaninotesi.com.tr/20231008/bidenden-israile-ek-yardim-emri-1076148343.html
+2026-05-03 17:09:28 | INFO    | gazze_korpus | [skip-short 90w] sputnik | https://anlatilaninotesi.com.tr/20231008/tel-avivdeki-marketlerin-raflari-bosaliyor-israilliler-ekmek-sut-ve-yumurta-stokluyor-1076147509.html
+2026-05-03 17:09:31 | INFO    | gazze_korpus | [skip-short 84w] sputnik | https://anlatilaninotesi.com.tr/20231008/dhc-baskan-danismani-ukraynaya-yardim-olarak-verilen-nato-silahlari-filistine-satildi--1076147580.html
+2026-05-03 17:09:33 | INFO    | gazze_korpus | [skip-short 62w] sputnik | https://anlatilaninotesi.com.tr/20231008/blinken-iranin-israile-saldiri-emrini-verdigine-dair-kanit-gormedik-1076147413.html
+2026-05-03 17:09:38 | INFO    | gazze_korpus | [skip-short 107w] sputnik | https://anlatilaninotesi.com.tr/20231009/msb-1-asker-sehit-oldu-1076179460.html
+2026-05-03 17:09:41 | INFO    | gazze_korpus | [skip-short 17w] sputnik | https://anlatilaninotesi.com.tr/20231009/israil-basbakani-netanyahu-amerikan-ucak-gemisi-bize-dogru-geliyor-1076179320.html
+2026-05-03 17:09:44 | INFO    | gazze_korpus | [skip-short 17w] sputnik | https://anlatilaninotesi.com.tr/20231009/otomotiv-ve-gayrimenkulde-yasanan-fiyat-artislarina-yeni-duzenleme-agir-yaptirimlar-geliyor-1076179036.html
+2026-05-03 17:09:46 | INFO    | gazze_korpus | [skip-short 52w] sputnik | https://anlatilaninotesi.com.tr/20231009/cumhurbaskani-erdogan-misir-cumhurbaskani-sisi-ile-telefonda-gorustu-1076178345.html
+2026-05-03 17:09:49 | INFO    | gazze_korpus | [skip-short 21w] sputnik | https://anlatilaninotesi.com.tr/20231009/disisleri-bakanligindan-osman-kavalaya-verilen-odule-tepki--1076178152.html
+2026-05-03 17:09:51 | INFO    | gazze_korpus | [skip-short 127w] sputnik | https://anlatilaninotesi.com.tr/20231009/abd-basini-biden-atacms-fuzelerinin-ukraynaya-verilmesine-eylulde-onay-verdi-1076178034.html
+2026-05-03 17:09:54 | INFO    | gazze_korpus | [skip-short 105w] sputnik | https://anlatilaninotesi.com.tr/20231009/borrellden-itiraf-abdnin-ukraynaya-sagladigi-finansmanda-belirsizlik-suruyor-1076167419.html
+2026-05-03 17:09:56 | INFO    | gazze_korpus | [skip-short 12w] sputnik | https://anlatilaninotesi.com.tr/20231009/israil-misirin-bizi-saldiri-konusunda-uyardigi-haberi-yalan-1076175935.html
+2026-05-03 17:09:59 | INFO    | gazze_korpus | [skip-short 78w] sputnik | https://anlatilaninotesi.com.tr/20231009/turk-buyukelci-samsar-ve-rusya-disisleri-bakan-yardimcisi-grusko-ukraynayi-gorustu-1076173301.html
+2026-05-03 17:10:01 | INFO    | gazze_korpus | [skip-short 13w] sputnik | https://anlatilaninotesi.com.tr/20231009/arda-gulerin-donusune-iliskin-tarih-verildi-real-madridin-plani-ne-1076177723.html
+2026-05-03 17:10:04 | INFO    | gazze_korpus | [skip-short 80w] sputnik | https://anlatilaninotesi.com.tr/20231009/tarihler-acikladi-emekliye-ek-odeme-ne-zaman-yapilacak-kimler-yararlanabilecek-1076177440.html
+2026-05-03 17:10:06 | INFO    | gazze_korpus | [skip-short 172w] sputnik | https://anlatilaninotesi.com.tr/20231009/cumhurbaskanligi-kabinesi-toplandi-1076169549.html
+2026-05-03 17:10:09 | INFO    | gazze_korpus | [skip-short 24w] sputnik | https://anlatilaninotesi.com.tr/20231009/trumpin-oglu-bir-sonraki-catisma-bolgesi-icin-adres-verdi-1076175725.html
+2026-05-03 17:10:12 | INFO    | gazze_korpus | [saved sputnik/tr 305w] İsrail: Gazze’de atılan füze Kudüs’teki Ahmet Kadirov Camii’ | https://anlatilaninotesi.com.tr/20231009/israil-gazzede-atilan-fuze-kudusteki-ahmet-kadirov-camiine-isabet-etti-1076174403.html
+2026-05-03 17:10:14 | INFO    | gazze_korpus | [skip-short 46w] sputnik | https://anlatilaninotesi.com.tr/20231009/cumhurbaskani-erdogan-katar-emiri-al-sani-ile-gorustu-1076175032.html
+2026-05-03 17:10:16 | INFO    | gazze_korpus | [skip-short 51w] sputnik | https://anlatilaninotesi.com.tr/20231009/rusya-ermenistanin-roma-statusu-kararini-dostane-olmayan-adim-olarak-nitelendirdi-1076170777.html
+2026-05-03 17:10:19 | INFO    | gazze_korpus | [skip-short 58w] sputnik | https://anlatilaninotesi.com.tr/20231009/rus-senator-ukraynanin-hamasa-silah-verdigi-dogrulanirsa-israil-bunu-affetmez-1076169407.html
+2026-05-03 17:10:21 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231009/1076174717.html
+2026-05-03 17:10:24 | INFO    | gazze_korpus | [skip-short 54w] sputnik | https://anlatilaninotesi.com.tr/20231009/iran-ve-sudan-diplomatik-iliskileri-surdurme-konusunda-anlasti-1076173668.html
+2026-05-03 17:10:27 | INFO    | gazze_korpus | [skip-short 14w] sputnik | https://anlatilaninotesi.com.tr/20231009/erdogan-filistin-devlet-baskani-mahmud-abbas-ile-gorustu-1076173410.html
+2026-05-03 17:10:31 | INFO    | gazze_korpus | [skip-short 125w] sputnik | https://anlatilaninotesi.com.tr/20231010/akkuyu-ngsde-ana-guvenlik-sistemlerinden-biri-kuruldu-1076216609.html
+2026-05-03 17:10:34 | INFO    | gazze_korpus | [skip-short 152w] sputnik | https://anlatilaninotesi.com.tr/20231010/ak-parti-tokat-il-baskanligindan-omer-halisdemir-caddesinin-isim-degisikligiyle-ilgili-aciklama-1076216215.html
+2026-05-03 17:10:36 | INFO    | gazze_korpus | [saved sputnik/tr 308w] İsrail Savunma Bakanı Gallant, Gazze’ye geniş çaplı taarruz  | https://anlatilaninotesi.com.tr/20231010/israil-savunma-bakani-gallant-gazzeye-genis-capli-taarruz-ilan-etti-1076217293.html
+2026-05-03 17:10:39 | INFO    | gazze_korpus | [skip-short 104w] sputnik | https://anlatilaninotesi.com.tr/20231010/belgorod-bolgesinde-ukrayna-ordusunun-topcu-saldirisinda-bir-kisi-oldu-1076205889.html
+2026-05-03 17:10:41 | INFO    | gazze_korpus | [skip-short 103w] sputnik | https://anlatilaninotesi.com.tr/20231010/lavrov-iranli-mevkidasi-abdullahiyan-ile-filistin-israil-ihtilafini-gorustu-1076215772.html
+2026-05-03 17:10:44 | INFO    | gazze_korpus | [skip-short 90w] sputnik | https://anlatilaninotesi.com.tr/20231010/tbmm-genel-kurulunda-3-rtuk-uyesi-secildi-1076215511.html
+2026-05-03 17:10:46 | INFO    | gazze_korpus | [skip-short 16w] sputnik | https://anlatilaninotesi.com.tr/20231010/cumhurbaskani-erdogan-rusya-devlet-baskani-putin-ile-gorustu-1076215306.html
+2026-05-03 17:10:49 | INFO    | gazze_korpus | [skip-short 15w] sputnik | https://anlatilaninotesi.com.tr/20231010/biden-israilde-oldurulenler-arasinda-en-az-14-abd-vatandasi-var-1076215267.html
+2026-05-03 17:10:52 | INFO    | gazze_korpus | [skip-short 150w] sputnik | https://anlatilaninotesi.com.tr/20231010/fenerbahceden-ali-kocun-cezasina-tepki-1076215089.html
+2026-05-03 17:10:54 | INFO    | gazze_korpus | [skip-short 63w] sputnik | https://anlatilaninotesi.com.tr/20231010/cumhurbaskani-erdogan-bm-genel-sekreteri-guterres-ile-telefonda-gorustu-1076214989.html
+2026-05-03 17:10:57 | INFO    | gazze_korpus | [skip-short 69w] sputnik | https://anlatilaninotesi.com.tr/20231010/jirinovskiyin-2019da-ukrayna-ve-ortadogu-ile-ilgili-yaptigi-kehanet-animsatildi-1076214569.html
+2026-05-03 17:11:00 | INFO    | gazze_korpus | [skip-short 133w] sputnik | https://anlatilaninotesi.com.tr/20231010/rusya-guvenlik-konseyi-baskan-yardimcisi-medvedev-isid-kiev-rejiminin-geleneksel-ortagi-1076207414.html
+2026-05-03 17:11:02 | INFO    | gazze_korpus | [skip-short 55w] sputnik | https://anlatilaninotesi.com.tr/20231010/istanbul-valisi-gul-kentteki-kyk-yurtlarina-iliskin-durumu-acikladi-1076214118.html
+2026-05-03 17:11:05 | INFO    | gazze_korpus | [skip-short 48w] sputnik | https://anlatilaninotesi.com.tr/20231010/filistinden-israile-beyaz-fosforlu-muhimmat-suclamasi-1076213694.html
+2026-05-03 17:11:09 | INFO    | gazze_korpus | [skip-short 38w] sputnik | https://anlatilaninotesi.com.tr/20231010/besiktas-teknik-direktor-kararini-acikladi-1076213463.html
+2026-05-03 17:11:11 | INFO    | gazze_korpus | [skip-short 60w] sputnik | https://anlatilaninotesi.com.tr/20231010/almanya-ukraynaya-10-adet-leopard-1a5-tanki-gonderecegini-duyurdu-1076213361.html
+2026-05-03 17:11:14 | INFO    | gazze_korpus | [skip-short 68w] sputnik | https://anlatilaninotesi.com.tr/20231010/bakan-guler-nato-savunma-bakanlari-toplantisina-katilmak-uzere-belcikaya-gitti-1076213256.html
+2026-05-03 17:11:16 | INFO    | gazze_korpus | [skip-short 128w] sputnik | https://anlatilaninotesi.com.tr/20231010/pasinyan-rus-baris-gucleri-karabagdan-ayrilirsa-rusyaya-donmek-zorunda-kalacaklar-1076210161.html
+2026-05-03 17:11:19 | INFO    | gazze_korpus | [skip-short 36w] sputnik | https://anlatilaninotesi.com.tr/20231010/borrelldan-israile-uluslararasi-insancil-hukuka-saygi-gostermeye-cagrisi-1076205719.html
+2026-05-03 17:11:21 | INFO    | gazze_korpus | [skip-short 37w] sputnik | https://anlatilaninotesi.com.tr/20231010/12-yasindaki-kiz-cocugu-elektronik-sigara-yuzunden-komaya-girdi-1076208651.html
+2026-05-03 17:11:26 | INFO    | gazze_korpus | [skip-short 58w] sputnik | https://anlatilaninotesi.com.tr/20231011/aliyev-baku-ve-erivan-arasindaki-dogrudan-muzakereler-rusyanin-arabuluculuguna-alternatif-olabilir-1076236538.html
+2026-05-03 17:11:28 | INFO    | gazze_korpus | [skip-short 18w] sputnik | https://anlatilaninotesi.com.tr/20231011/abd-gazzedeki-filistinliler-icin-guvenli-gecis-koridoru-konusunda-israil-ve-misirla-gorusuyoruz-1076254660.html
+2026-05-03 17:11:31 | INFO    | gazze_korpus | [skip-short 170w] sputnik | https://anlatilaninotesi.com.tr/20231011/viyanadaki-rus-heyeti-uyesi-batinin-saldirgan-cizgisi-ortadoguda-kan-dokulmesine-neden-oldu-1076254479.html
+2026-05-03 17:11:33 | INFO    | gazze_korpus | [skip-short 121w] sputnik | https://anlatilaninotesi.com.tr/20231011/azerbaycan-pasinyanin-ermeni-koylerinin-isgal-edildigine-iliskin-aciklamasini-yalanladi-1076246705.html
+2026-05-03 17:11:36 | INFO    | gazze_korpus | [skip-short 12w] sputnik | https://anlatilaninotesi.com.tr/20231011/putin-filistin-israil-catismasinda-diplomasiye-basvurmak-gerekiyor-1076253873.html
+2026-05-03 17:11:39 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231011/fsb-direktoru-bati-ukraynayi-parali-askerler-icin-egitim-sahasina-donusturdu-1076234412.html
+2026-05-03 17:11:41 | INFO    | gazze_korpus | [skip-short 22w] sputnik | https://anlatilaninotesi.com.tr/20231011/cumhurbaskani-erdogan-rehineler-icin-devrede-hamasla-muzakere-basladi-1076253468.html
+2026-05-03 17:11:44 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231011/abdden-petrol-krizine-cozum-arayisi-venezuella-petrolu-1076233775.html
+2026-05-03 17:11:46 | INFO    | gazze_korpus | [skip-short 107w] sputnik | https://anlatilaninotesi.com.tr/20231011/alman-medyasi-israil-bes-cephede-catisma-riskiyle-karsi-karsiya-1076252990.html
+2026-05-03 17:11:49 | INFO    | gazze_korpus | [skip-short 23w] sputnik | https://anlatilaninotesi.com.tr/20231011/bagimsiz-devletler-toplulugu-zirvesinde-uluslararasi-rusca-orgutu-ile-ilgili-anlasma-imzalanacak-1076252809.html
+2026-05-03 17:11:51 | INFO    | gazze_korpus | [skip-short 71w] sputnik | https://anlatilaninotesi.com.tr/20231011/irak-basbakani-kerkuk-ceyhan-hattindan-turkiyeye-sevkiyati-baslatmaya-hazir-olduklarini-belirtti-1076252624.html
+2026-05-03 17:11:54 | INFO    | gazze_korpus | [skip-short 32w] sputnik | https://anlatilaninotesi.com.tr/20231011/pentagon-atacms-fuzelerinin-teslimati-konusunda-henuz-aciklayacak-bir-sey-yok-1076251007.html
+2026-05-03 17:11:56 | INFO    | gazze_korpus | [skip-short 139w] sputnik | https://anlatilaninotesi.com.tr/20231011/abd-ucak-gemisi-dogu-akdenize-ulasti-1076252156.html
+2026-05-03 17:11:59 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231011/1076251814.html
+2026-05-03 17:12:01 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231011/israil-istihbarati-adina-casusluk-yaptigi-iddia-edilen-saniklar-hakim-karsisina-cikti-1076251189.html
+2026-05-03 17:12:04 | INFO    | gazze_korpus | [skip-short 68w] sputnik | https://anlatilaninotesi.com.tr/20231011/lubnan-tezkeresi-meclisten-gecti-1076250954.html
+2026-05-03 17:12:06 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231011/1076251600.html
+2026-05-03 17:12:08 | INFO    | gazze_korpus | [skip-short 73w] sputnik | https://anlatilaninotesi.com.tr/20231011/misir-yabanci-rehinelerin-serbest-birakilmasi-meselesini-hamas-ile-muzakere-edecek-1076250727.html
+2026-05-03 17:12:10 | INFO    | gazze_korpus | [skip-short 180w] sputnik | https://anlatilaninotesi.com.tr/20231011/cin-ortadoguda-acil-ateskes-gerekli-1076250445.html
+2026-05-03 17:12:13 | INFO    | gazze_korpus | [skip-short 129w] sputnik | https://anlatilaninotesi.com.tr/20231011/ibbye-688-milyon-euro-dis-borclanma-yetkisi-verildi-1076250325.html
+2026-05-03 17:12:17 | INFO    | gazze_korpus | [skip-short 65w] sputnik | https://anlatilaninotesi.com.tr/20231012/suriye-disisleri-israilin-sam-ve-halepe-saldirilari-saldirganlik-politikasinin-devami-1076290605.html
+2026-05-03 17:12:19 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231012/abd-hangi-ulkelere-silah-satiyor-1076280739.html
+2026-05-03 17:12:22 | INFO    | gazze_korpus | [skip-short 14w] sputnik | https://anlatilaninotesi.com.tr/20231012/ukraynanin-tahil-ihracatinda-keskin-dusus--1076262011.html
+2026-05-03 17:12:24 | INFO    | gazze_korpus | [saved sputnik/tr 475w] TBMM'de 'Filistin' oturumunun ardından 6 partiden ortak bild | https://anlatilaninotesi.com.tr/20231012/tbmmde-filistin-oturumunun-ardindan-6-partiden-ortak-bildiri-1076290122.html
+2026-05-03 17:12:27 | INFO    | gazze_korpus | [skip-short 13w] sputnik | https://anlatilaninotesi.com.tr/20231012/disisleri-bakanligi-abdnin-bolucu-teror-orgutu-ile-angajmanini-sonlandirmasini-bekliyoruz-1076289662.html
+2026-05-03 17:12:29 | INFO    | gazze_korpus | [skip-short 116w] sputnik | https://anlatilaninotesi.com.tr/20231012/nato-onumuzdeki-hafta-nukleer-tatbikat-yapilacagini-duyurdu-1076281891.html
+2026-05-03 17:12:31 | INFO    | gazze_korpus | [skip-short 129w] sputnik | https://anlatilaninotesi.com.tr/20231012/biden-suriye-kaynakli-ulusal-acil-durumu-uzatma-karari-aldi-1076289396.html
+2026-05-03 17:12:34 | INFO    | gazze_korpus | [skip-short 65w] sputnik | https://anlatilaninotesi.com.tr/20231012/emeklilere-5-bin-lira-odenmesine-iliskin-duzenleme-kanun-teklifine-onergeyle-eklendi-1076289454.html
+2026-05-03 17:12:36 | INFO    | gazze_korpus | [saved sputnik/tr 213w] Netanyahu: 7 Ekim, Holokost'tan bu yana Yahudi halkının yaşa | https://anlatilaninotesi.com.tr/20231012/netanyahu-7-ekim-holokosttan-bu-yana-yahudi-halkinin-yasadigi-en-kotu-gun-1076289239.html
+2026-05-03 17:12:36 | INFO    | gazze_korpus | [sputnik] max_articles limit (5) doldu — durdur
+2026-05-03 17:12:36 | INFO    | gazze_korpus | <<< sputnik scraper bitti — bu çalıştırmada 5 haber kaydedildi
+2026-05-03 17:12:36 | INFO    | gazze_korpus | >>> euronews scraper başlıyor (test_mode=True)
+2026-05-03 17:15:28 | INFO    | gazze_korpus | [saved euronews/en 355w] Yemen's Houthis say they launched missiles, rockets at Weste | https://www.euronews.com/2024/04/07/yemens-houthis-say-they-launched-missiles-rockets-at-western-ships
+2026-05-03 17:15:30 | INFO    | gazze_korpus | [saved euronews/en 351w] IDF quietly withdraws from southern Gaza strip | https://www.euronews.com/2024/04/07/idf-dramatically-reduces-troops-on-the-ground-in-southern-gaza-strip
+2026-05-03 17:15:34 | INFO    | gazze_korpus | [saved euronews/en 580w] Lethal Gaza aid convoy strike sparks row between Poland and  | https://www.euronews.com/2024/04/05/lethal-gaza-aid-convoy-strike-sparks-row-between-poland-and-israel
+2026-05-03 17:15:39 | INFO    | gazze_korpus | [saved euronews/en 537w] Judges urge UK government to halt arms sales to Israel after | https://www.euronews.com/2024/04/04/judges-urge-uk-government-to-halt-arms-sales-to-israel-after-aid-convoy-strike
+2026-05-03 17:15:42 | INFO    | gazze_korpus | [saved euronews/en 601w] Gaza: Anger at aid convoy strike continues as IRC warns of t | https://www.euronews.com/2024/04/04/gaza-is-the-most-lethal-place-in-the-world-to-be-an-aid-worker-says-irc
+2026-05-03 17:15:42 | INFO    | gazze_korpus | [euronews] max_articles limit (5) doldu — durdur
+2026-05-03 17:15:42 | INFO    | gazze_korpus | <<< euronews scraper bitti — bu çalıştırmada 5 haber kaydedildi
+2026-05-03 17:15:42 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 17:15:42 | INFO    | gazze_korpus | ÖZET — bu çalıştırma
+2026-05-03 17:15:42 | INFO    | gazze_korpus |   aa         : 5 haber kaydedildi
+2026-05-03 17:15:42 | INFO    | gazze_korpus |   sputnik    : 5 haber kaydedildi
+2026-05-03 17:15:42 | INFO    | gazze_korpus |   euronews   : 5 haber kaydedildi
+2026-05-03 17:15:42 | INFO    | gazze_korpus | ÖZET — kümülatif (tüm zamanlar)
+2026-05-03 17:15:42 | INFO    | gazze_korpus |   aa         : saved=5  filtered=1  failed=0
+2026-05-03 17:15:42 | INFO    | gazze_korpus |   sputnik    : saved=5  filtered=104  failed=0
+2026-05-03 17:15:42 | INFO    | gazze_korpus |   euronews   : saved=5  filtered=0  failed=0
+2026-05-03 17:15:42 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 17:35:39 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 17:35:39 | INFO    | gazze_korpus | Logger başlatıldı | Log dosyası: C:\GazzeKorpus\scripts\logs\scraping_2026-05-03.log
+2026-05-03 17:35:39 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 17:35:39 | INFO    | gazze_korpus | Konfigürasyon: C:\GazzeKorpus\scripts\config.yaml
+2026-05-03 17:35:39 | INFO    | gazze_korpus | Çıktı dizini : C:\GazzeKorpus\corpus
+2026-05-03 17:35:39 | INFO    | gazze_korpus | Test modu    : True
+2026-05-03 17:35:39 | INFO    | gazze_korpus | Dry run      : False
+2026-05-03 17:35:39 | INFO    | gazze_korpus | Tarih araligi: 2023-10-07 -> 2024-04-07
+2026-05-03 17:35:39 | INFO    | gazze_korpus | Aktif kaynaklar: aa, sputnik, euronews
+2026-05-03 17:35:39 | INFO    | gazze_korpus | >>> aa scraper başlıyor (test_mode=True, langs=['en', 'tr'])
+2026-05-03 17:35:56 | INFO    | gazze_korpus | [saved aa/en 378w] WHO chief urges Israel to reverse Al Awda Hospital evacuatio | https://www.aa.com.tr/en/europe/who-chief-urges-israel-to-reverse-al-awda-hospital-evacuation-demand/3019234
+2026-05-03 17:35:58 | INFO    | gazze_korpus | [saved aa/en 272w] Germany does not support UNICEF call for Gaza cease-fire | https://www.aa.com.tr/en/europe/germany-does-not-support-unicef-call-for-gaza-cease-fire/3019169
+2026-05-03 17:36:02 | INFO    | gazze_korpus | [saved aa/en 234w] Red Cross warns humanitarian groups won't be able to assist  | https://www.aa.com.tr/en/europe/red-cross-warns-humanitarian-groups-wont-be-able-to-assist-massive-displacement-in-gaza/3018881
+2026-05-03 17:36:02 | INFO    | gazze_korpus | [skip-title] aa | https://www.aa.com.tr/en/europe/putin-says-karabakh-irrevocably-became-part-of-azerbaijan-in-2022/3018909
+2026-05-03 17:36:06 | INFO    | gazze_korpus | [saved aa/en 274w] Gaza faces collective punishment by Israel: Doctors Without  | https://www.aa.com.tr/en/europe/gaza-faces-collective-punishment-by-israel-doctors-without-borders/3018693
+2026-05-03 17:36:09 | INFO    | gazze_korpus | [saved aa/en 994w] Not in short term but Gaza crisis could impact Ukraine war d | https://www.aa.com.tr/en/russia-ukraine-war/not-in-short-term-but-gaza-crisis-could-impact-ukraine-war-down-the-line-experts/3018254
+2026-05-03 17:36:15 | INFO    | gazze_korpus | GDELT 429 — 30 saniye bekleyip tekrar deneniyor
+2026-05-03 17:36:56 | INFO    | gazze_korpus | GDELT 429 — 30 saniye bekleyip tekrar deneniyor
+2026-05-03 17:37:45 | INFO    | gazze_korpus | GDELT 429 — 30 saniye bekleyip tekrar deneniyor
+2026-05-03 17:38:26 | INFO    | gazze_korpus | [saved aa/tr 264w] The Times, İsrail'in "bebek iddiaları" haberinde Gazzeli yar | https://www.aa.com.tr/tr/dunya/the-times-israilin-bebek-iddialari-haberinde-gazzeli-yarali-cocuklarin-fotografini-kullandi/3018980
+2026-05-03 17:38:30 | INFO    | gazze_korpus | [saved aa/tr 409w] İskoçya Başbakanı'nın Gazze'de mahsur kalan kayınvalidesi: İ | https://www.aa.com.tr/tr/dunya/iskocya-basbakaninin-gazzede-mahsur-kalan-kayinvalidesi-insanlik-nerede/3018715
+2026-05-03 17:38:34 | INFO    | gazze_korpus | [saved aa/tr 2594w] İsrail'in Gazze'ye saldırıları şiddetlenerek devam ediyor | https://www.aa.com.tr/tr/dunya/israilin-gazzeye-saldirilari-siddetlenerek-devam-ediyor/3018448
+2026-05-03 17:38:38 | INFO    | gazze_korpus | [saved aa/tr 296w] Filistinli yetkililer, Gazze'deki hastanelerin "vahim durumd | https://www.aa.com.tr/tr/dunya/filistinli-yetkililer-gazzedeki-hastanelerin-vahim-durumda-oldugunu-acikladi/3018414
+2026-05-03 17:38:40 | INFO    | gazze_korpus | [saved aa/tr 267w] BM: İsrail'in Gazze'nin kuzeyindeki 1 milyon sivile 24 saat  | https://www.aa.com.tr/tr/dunya/bm-israilin-gazzenin-kuzeyindeki-1-milyon-sivile-24-saat-tanimasi-dehset-verici/3018398
+2026-05-03 17:38:40 | INFO    | gazze_korpus | [aa] tüm dillerde per-lang cap (5) doldu — durdur
+2026-05-03 17:38:40 | INFO    | gazze_korpus | <<< aa scraper bitti — bu çalıştırmada 10 haber ({'en': 5, 'tr': 5})
+2026-05-03 17:38:40 | INFO    | gazze_korpus | >>> sputnik scraper başlıyor (test_mode=True, langs=['tr'])
+2026-05-03 17:38:47 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076133500.html
+2026-05-03 17:38:49 | INFO    | gazze_korpus | [skip-short 26w] sputnik | https://anlatilaninotesi.com.tr/20231007/rus-buyukelci-filistin-israil-catismasinin-onumuzdeki-gunlerde-cozume-kavusmasi-pek-olasi-degil-1076130276.html
+2026-05-03 17:38:52 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076132934.html
+2026-05-03 17:38:54 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076132734.html
+2026-05-03 17:38:57 | INFO    | gazze_korpus | [skip-short 92w] sputnik | https://anlatilaninotesi.com.tr/20231007/mahmud-abbas-israilin-eylemleri-durdurulmali-1076132338.html
+2026-05-03 17:39:00 | INFO    | gazze_korpus | [skip-short 22w] sputnik | https://anlatilaninotesi.com.tr/20231007/prof-dr-sambur-batililar-israil-filistin-sorunu-hep-israil-merkezli-olarak-degerlendirmislerdir-1076131586.html
+2026-05-03 17:39:02 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076132077.html
+2026-05-03 17:39:05 | INFO    | gazze_korpus | [saved sputnik/tr 184w] Netanyahu: Tüm gücümüzü kullanacağız, siviller Gazze’yi terk | https://anlatilaninotesi.com.tr/20231007/netanyahu-tum-askeri-gucumuzu-kullanacagiz-1076131554.html
+2026-05-03 17:39:07 | INFO    | gazze_korpus | [saved sputnik/tr 241w] Türkiye'nin çeşitli kentlerinde Filistinlilere destek göster | https://anlatilaninotesi.com.tr/20231007/turkiyenin-cesitli-kentlerinde-filistinlilere-destek-gosterisi-1076131380.html
+2026-05-03 17:39:10 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231007/bassavciliktan-sancaktepede-3-kardesin-olumune-iliskin-sorusturmayla-ilgili-aciklama-1076130182.html
+2026-05-03 17:39:12 | INFO    | gazze_korpus | [saved sputnik/tr 193w] ABD Başkanı Biden'dan İsrail'e destek | https://anlatilaninotesi.com.tr/20231007/biden-tam-olarak-israile-destek-veriyoruz-nokta-1076130385.html
+2026-05-03 17:39:15 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076129949.html
+2026-05-03 17:39:17 | INFO    | gazze_korpus | [skip-short 41w] sputnik | https://anlatilaninotesi.com.tr/20231007/ermenistan-filistinliler-ve-israil-arasinda-yasanan-siddet-olaylarindan-dolayi-sok-icindeyiz-1076129325.html
+2026-05-03 17:39:20 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076129695.html
+2026-05-03 17:39:22 | INFO    | gazze_korpus | [skip-short 24w] sputnik | https://anlatilaninotesi.com.tr/20231007/israil-savunma-bakani-gazze-seridindeki-operasyonlari-genisletmeye-haziriz-1076128341.html
+2026-05-03 17:39:25 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076129081.html
+2026-05-03 17:39:27 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231007/ak-partide-yeni-myk-belli-oldu-1076128825.html
+2026-05-03 17:39:30 | INFO    | gazze_korpus | [skip-short 70w] sputnik | https://anlatilaninotesi.com.tr/20231007/rusya-disisleri-bakanligi-israildeki-catismanin-tirmanmasindan-endise-duyuyoruz-1076128625.html
+2026-05-03 17:39:32 | INFO    | gazze_korpus | [skip-short 31w] sputnik | https://anlatilaninotesi.com.tr/20231007/israil-muhalefeti-netanyahuya-acil-durum-hukumeti-kurmasini-onerdi-1076127389.html
+2026-05-03 17:39:35 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231007/1076128016.html
+2026-05-03 17:39:40 | INFO    | gazze_korpus | [skip-short 50w] sputnik | https://anlatilaninotesi.com.tr/20231008/denizlispor-taraftar-grubu-otobusune-silahli-saldiri-1076152125.html
+2026-05-03 17:39:42 | INFO    | gazze_korpus | [skip-short 62w] sputnik | https://anlatilaninotesi.com.tr/20231008/yangin-tren-yoluna-sicradi-uluslararasi-lojistik-tren-seferi-durdu-1076151853.html
+2026-05-03 17:39:45 | INFO    | gazze_korpus | [skip-short 50w] sputnik | https://anlatilaninotesi.com.tr/20231008/bakan-fidan-birlesik-arap-emirlikleri-disisleri-bakani-al-nahyan-ile-gorustu-1076151581.html
+2026-05-03 17:39:47 | INFO    | gazze_korpus | [skip-short 62w] sputnik | https://anlatilaninotesi.com.tr/20231008/israilde-en-az-10-nepalli-universite-ogrencisi-oldu-1076151370.html
+2026-05-03 17:39:50 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231008/msbden-operasyon-aciklamasi-petrol-tesisi-ile-siginaklardan-olusan-6-hedef-imha-edilmistir-1076151027.html
+2026-05-03 17:39:52 | INFO    | gazze_korpus | [skip-short 92w] sputnik | https://anlatilaninotesi.com.tr/20231008/baskasina-ait-villaya-girdi-hirsiz-degilim-uyumaya-geldim-1076150900.html
+2026-05-03 17:39:54 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231008/uefadan-israil-karari-1076150538.html
+2026-05-03 17:39:57 | INFO    | gazze_korpus | [skip-short 20w] sputnik | https://anlatilaninotesi.com.tr/20231008/emeklilere-ikramiye-ne-zaman-verilecek-1076150421.html
+2026-05-03 17:39:59 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231008/rusya-savunma-bakanligi-ukrayna-ordusunun-tum-saldirilari-puskurtuldu-1076150107.html
+2026-05-03 17:40:02 | INFO    | gazze_korpus | [skip-short 41w] sputnik | https://anlatilaninotesi.com.tr/20231008/abd-temsilciler-meclisi-uyesi-israile-saldirida-kullanilan-silah-ukraynadan-gelmis-olabilir---1076150007.html
+2026-05-03 17:40:05 | INFO    | gazze_korpus | [skip-short 25w] sputnik | https://anlatilaninotesi.com.tr/20231008/cumhuriyet-tarihinin-ilk-kilisesi-torenle-acildi-1076149813.html
+2026-05-03 17:40:07 | INFO    | gazze_korpus | [skip-short 19w] sputnik | https://anlatilaninotesi.com.tr/20231008/fenerbahce-galibiyet-serisini-surduruyor-ligde-8-toplamda-16-mac-1076149516.html
+2026-05-03 17:40:10 | INFO    | gazze_korpus | [skip-short 91w] sputnik | https://anlatilaninotesi.com.tr/20231008/turkiye-macinin-aday-kadrosundaydi-milli-takimi-birakti-1076149161.html
+2026-05-03 17:40:12 | INFO    | gazze_korpus | [skip-short 6w] sputnik | https://anlatilaninotesi.com.tr/20231008/1076149127.html
+2026-05-03 17:40:15 | INFO    | gazze_korpus | [skip-short 56w] sputnik | https://anlatilaninotesi.com.tr/20231008/polonya-devlet-baskani-duda-israildeki-durumun-ciddiyeti-abartmamali-ilk-degil-1076148840.html
+2026-05-03 17:40:17 | INFO    | gazze_korpus | [skip-short 74w] sputnik | https://anlatilaninotesi.com.tr/20231008/israilli-sanatci-riff-cohenin-istanbul-konseri-iptal-edildi-1076148461.html
+2026-05-03 17:40:20 | INFO    | gazze_korpus | [skip-short 67w] sputnik | https://anlatilaninotesi.com.tr/20231008/bidenden-israile-ek-yardim-emri-1076148343.html
+2026-05-03 17:40:22 | INFO    | gazze_korpus | [skip-short 90w] sputnik | https://anlatilaninotesi.com.tr/20231008/tel-avivdeki-marketlerin-raflari-bosaliyor-israilliler-ekmek-sut-ve-yumurta-stokluyor-1076147509.html
+2026-05-03 17:40:25 | INFO    | gazze_korpus | [skip-short 84w] sputnik | https://anlatilaninotesi.com.tr/20231008/dhc-baskan-danismani-ukraynaya-yardim-olarak-verilen-nato-silahlari-filistine-satildi--1076147580.html
+2026-05-03 17:40:27 | INFO    | gazze_korpus | [skip-short 62w] sputnik | https://anlatilaninotesi.com.tr/20231008/blinken-iranin-israile-saldiri-emrini-verdigine-dair-kanit-gormedik-1076147413.html
+2026-05-03 17:40:32 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231009/msb-1-asker-sehit-oldu-1076179460.html
+2026-05-03 17:40:34 | INFO    | gazze_korpus | [skip-short 17w] sputnik | https://anlatilaninotesi.com.tr/20231009/israil-basbakani-netanyahu-amerikan-ucak-gemisi-bize-dogru-geliyor-1076179320.html
+2026-05-03 17:40:37 | INFO    | gazze_korpus | [skip-short 17w] sputnik | https://anlatilaninotesi.com.tr/20231009/otomotiv-ve-gayrimenkulde-yasanan-fiyat-artislarina-yeni-duzenleme-agir-yaptirimlar-geliyor-1076179036.html
+2026-05-03 17:40:39 | INFO    | gazze_korpus | [skip-short 52w] sputnik | https://anlatilaninotesi.com.tr/20231009/cumhurbaskani-erdogan-misir-cumhurbaskani-sisi-ile-telefonda-gorustu-1076178345.html
+2026-05-03 17:40:42 | INFO    | gazze_korpus | [skip-short 21w] sputnik | https://anlatilaninotesi.com.tr/20231009/disisleri-bakanligindan-osman-kavalaya-verilen-odule-tepki--1076178152.html
+2026-05-03 17:40:44 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231009/abd-basini-biden-atacms-fuzelerinin-ukraynaya-verilmesine-eylulde-onay-verdi-1076178034.html
+2026-05-03 17:40:46 | INFO    | gazze_korpus | [skip-offtopic] sputnik | https://anlatilaninotesi.com.tr/20231009/borrellden-itiraf-abdnin-ukraynaya-sagladigi-finansmanda-belirsizlik-suruyor-1076167419.html
+2026-05-03 17:40:48 | INFO    | gazze_korpus | [skip-short 12w] sputnik | https://anlatilaninotesi.com.tr/20231009/israil-misirin-bizi-saldiri-konusunda-uyardigi-haberi-yalan-1076175935.html
+2026-05-03 17:40:51 | INFO    | gazze_korpus | [skip-short 78w] sputnik | https://anlatilaninotesi.com.tr/20231009/turk-buyukelci-samsar-ve-rusya-disisleri-bakan-yardimcisi-grusko-ukraynayi-gorustu-1076173301.html
+2026-05-03 17:40:53 | INFO    | gazze_korpus | [skip-short 13w] sputnik | https://anlatilaninotesi.com.tr/20231009/arda-gulerin-donusune-iliskin-tarih-verildi-real-madridin-plani-ne-1076177723.html
+2026-05-03 17:40:56 | INFO    | gazze_korpus | [skip-short 80w] sputnik | https://anlatilaninotesi.com.tr/20231009/tarihler-acikladi-emekliye-ek-odeme-ne-zaman-yapilacak-kimler-yararlanabilecek-1076177440.html
+2026-05-03 17:40:58 | INFO    | gazze_korpus | [saved sputnik/tr 172w] Erdoğan'dan 1967 vurgulu 'barış' çağrısı: Bağımsız Filistin  | https://anlatilaninotesi.com.tr/20231009/cumhurbaskanligi-kabinesi-toplandi-1076169549.html
+2026-05-03 17:41:01 | INFO    | gazze_korpus | [skip-short 24w] sputnik | https://anlatilaninotesi.com.tr/20231009/trumpin-oglu-bir-sonraki-catisma-bolgesi-icin-adres-verdi-1076175725.html
+2026-05-03 17:41:03 | INFO    | gazze_korpus | [saved sputnik/tr 305w] İsrail: Gazze’de atılan füze Kudüs’teki Ahmet Kadirov Camii’ | https://anlatilaninotesi.com.tr/20231009/israil-gazzede-atilan-fuze-kudusteki-ahmet-kadirov-camiine-isabet-etti-1076174403.html
+2026-05-03 17:41:03 | INFO    | gazze_korpus | [sputnik] tüm dillerde per-lang cap (5) doldu — durdur
+2026-05-03 17:41:03 | INFO    | gazze_korpus | <<< sputnik scraper bitti — bu çalıştırmada 5 haber ({'tr': 5})
+2026-05-03 17:41:03 | INFO    | gazze_korpus | >>> euronews scraper başlıyor (test_mode=True, langs=['en', 'tr'])
+2026-05-03 17:43:58 | INFO    | gazze_korpus | [saved euronews/en 355w] Yemen's Houthis say they launched missiles, rockets at Weste | https://www.euronews.com/2024/04/07/yemens-houthis-say-they-launched-missiles-rockets-at-western-ships
+2026-05-03 17:44:01 | INFO    | gazze_korpus | [saved euronews/en 351w] IDF quietly withdraws from southern Gaza strip | https://www.euronews.com/2024/04/07/idf-dramatically-reduces-troops-on-the-ground-in-southern-gaza-strip
+2026-05-03 17:44:04 | INFO    | gazze_korpus | [saved euronews/en 580w] Lethal Gaza aid convoy strike sparks row between Poland and  | https://www.euronews.com/2024/04/05/lethal-gaza-aid-convoy-strike-sparks-row-between-poland-and-israel
+2026-05-03 17:44:09 | INFO    | gazze_korpus | [saved euronews/en 537w] Judges urge UK government to halt arms sales to Israel after | https://www.euronews.com/2024/04/04/judges-urge-uk-government-to-halt-arms-sales-to-israel-after-aid-convoy-strike
+2026-05-03 17:44:12 | INFO    | gazze_korpus | [saved euronews/en 601w] Gaza: Anger at aid convoy strike continues as IRC warns of t | https://www.euronews.com/2024/04/04/gaza-is-the-most-lethal-place-in-the-world-to-be-an-aid-worker-says-irc
+2026-05-03 17:45:48 | ERROR   | gazze_korpus | FETCH FAIL [euronews] https://www.euronews.com/tag/israel-hamas-war?p=87 | HTTP 404
+2026-05-03 17:45:48 | WARNING | gazze_korpus | [euronews] tag sayfası erişilemez: https://www.euronews.com/tag/israel-hamas-war?p=87
+2026-05-03 17:46:09 | ERROR   | gazze_korpus | FETCH FAIL [euronews] https://www.euronews.com/tag/gaza?p=1 | HTTP 404
+2026-05-03 17:46:09 | WARNING | gazze_korpus | [euronews] tag sayfası erişilemez: https://www.euronews.com/tag/gaza?p=1
+2026-05-03 17:47:30 | INFO    | gazze_korpus | [euronews] en/palestine p=29 tüm haberler tarih aralığından eski — durdur
+2026-05-03 17:48:39 | INFO    | gazze_korpus | [skip-short 136w] euronews | https://tr.euronews.com/2024/04/07/israil-bir-tugay-haric-askeri-birliklerini-gazzenin-guneyinden-cekti
+2026-05-03 17:48:41 | INFO    | gazze_korpus | [saved euronews/tr 413w] Yedinci ayına giren Gazze savaşında ağır bilanço: Ölüm, yıkı | https://tr.euronews.com/2024/04/07/yedinci-ayina-giren-gazze-savasinda-agir-bilanco-olum-yikim-ve-aclik
+2026-05-03 17:48:45 | INFO    | gazze_korpus | [saved euronews/tr 245w] Biden'dan Gazze'de ateşkes için baskı: Mısır ve Katar'a mekt | https://tr.euronews.com/2024/04/06/bidendan-gazzede-ateskes-icin-baski-misir-ve-katara-mektup-netanyahuya-telefon
+2026-05-03 17:48:47 | INFO    | gazze_korpus | [saved euronews/tr 501w] Erez Sınır Kapısı nerede, Gazze'ye insani yardımlar bundan s | https://tr.euronews.com/2024/04/05/erez-sinir-kapisi-nerede-gazzeye-insani-yardimlar-bundan-sonra-nasil-olacak
+2026-05-03 17:48:50 | INFO    | gazze_korpus | [saved euronews/tr 468w] BM İnsan Hakları Konseyi, İsrail'e silah satışının durdurulm | https://tr.euronews.com/2024/04/05/bm-insan-haklari-konseyi-israile-silah-satisinin-durdurulmasi-cagrisinda-bulundu
+2026-05-03 17:48:56 | INFO    | gazze_korpus | [saved euronews/tr 688w] 13 küresel yardım kuruluşundan ortak açıklama: Gazze'ye yard | https://tr.euronews.com/2024/04/05/13-kuresel-yardim-kurulusundan-ortak-aciklama-gazzeye-yardim-ulastirmak-neredeyse-imkansiz
+2026-05-03 17:48:56 | INFO    | gazze_korpus | [euronews] tüm dillerde per-lang cap (5) doldu — durdur
+2026-05-03 17:48:56 | INFO    | gazze_korpus | <<< euronews scraper bitti — bu çalıştırmada 10 haber ({'en': 5, 'tr': 5})
+2026-05-03 17:48:56 | INFO    | gazze_korpus | ======================================================================
+2026-05-03 17:48:56 | INFO    | gazze_korpus | ÖZET — bu çalıştırma
+2026-05-03 17:48:56 | INFO    | gazze_korpus |   aa         : 10 haber kaydedildi
+2026-05-03 17:48:56 | INFO    | gazze_korpus |   sputnik    : 5 haber kaydedildi
+2026-05-03 17:48:56 | INFO    | gazze_korpus |   euronews   : 10 haber kaydedildi
+2026-05-03 17:48:56 | INFO    | gazze_korpus | ÖZET — kümülatif (tüm zamanlar)
+2026-05-03 17:48:56 | INFO    | gazze_korpus |   aa         : saved=10  filtered=1  failed=0
+2026-05-03 17:48:56 | INFO    | gazze_korpus |   sputnik    : saved=5  filtered=49  failed=0
+2026-05-03 17:48:56 | INFO    | gazze_korpus |   euronews   : saved=10  filtered=1  failed=0
+2026-05-03 17:48:56 | INFO    | gazze_korpus | ======================================================================
