@@ -1,0 +1,175 @@
+# =====================================================================
+# GAZZE KORPUSU — Sputnik EN Scraping Workflow
+# =====================================================================
+# Bu workflow, sputnikglobe.com (Sputnik EN) haberlerini Microsoft-hosted
+# Ubuntu runner'da (Frankfurt datacenter) çeker.
+#
+# NEDEN GitHub Actions?
+# Türkiye'den lokal Python ile sputnikglobe.com'a erişim, RTÜK kararı
+# uyarınca SNI-bazlı engelleme nedeniyle TCP düzeyinde kapalıdır.
+# GitHub Actions runner'ı Türkiye dışı bir IP'den çıktığı için bu
+# engelden etkilenmez. Sputnik TR (anlatilaninotesi.com.tr), AA ve
+# Euronews lokal Python ile çekilir; yalnızca Sputnik EN bu workflow
+# üzerinden çekilir.
+#
+# NASIL ÇALIŞTIRILIR?
+# 1. GitHub'da bu repoya gidin: https://github.com/ebarut07/gaza-corpus-tr-en
+# 2. Üstteki "Actions" sekmesine tıklayın
+# 3. Sol menüden "Sputnik EN Scraping" workflow'unu seçin
+# 4. Sağ üstte "Run workflow" butonuna basın
+# 5. (İsteğe bağlı) Tarih aralığı / makale sayısı parametrelerini
+#    değiştirin — varsayılanlar tam scraping içindir
+# 6. Yeşil "Run workflow" butonuna basın
+# 7. ~1-2 saat sonra workflow tamamlanır
+# 8. Tamamlanan run'a tıklayın → en aşağıdaki "Artifacts" bölümünden
+#    "sputnik-en-corpus" zip dosyasını indirin
+# 9. Lokalde: py scripts/merge_github_artifacts.py PATH/sputnik-en-corpus.zip
+# =====================================================================
+
+name: Sputnik EN Scraping
+
+on:
+  # Manuel tetikleme — kullanıcı GitHub web arayüzünden başlatır.
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'Başlangıç tarihi (YYYY-MM-DD) — Gazze savaşı başlangıcı için 2023-10-07'
+        required: true
+        default: '2023-10-07'
+        type: string
+
+      end_date:
+        description: 'Bitiş tarihi (YYYY-MM-DD) — İlk altı ay için 2024-04-07'
+        required: true
+        default: '2024-04-07'
+        type: string
+
+      max_articles:
+        description: 'Maksimum makale sayısı (test için sayı; tam scraping için 0 = sınırsız)'
+        required: true
+        default: '0'
+        type: string
+
+jobs:
+  scrape:
+    name: Sputnik EN haberlerini Frankfurt'tan çek
+    runs-on: ubuntu-latest
+
+    # 6 saatlik GitHub Actions sınırı altında, retry ve hata payı için 5 saat.
+    timeout-minutes: 300
+
+    steps:
+      # ---------------------------------------------------------------
+      # 1. Repo dosyalarını runner'a indir
+      # ---------------------------------------------------------------
+      - name: Repo'yu checkout et
+        uses: actions/checkout@v4
+
+      # ---------------------------------------------------------------
+      # 2. Python 3.12 ortamını kur (en stabil sürüm)
+      # ---------------------------------------------------------------
+      - name: Python 3.12 kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: 'scripts/requirements.txt'
+
+      # ---------------------------------------------------------------
+      # 3. Bağımlılıkları yükle (requests, beautifulsoup4, lxml,
+      #    pyyaml, tenacity)
+      # ---------------------------------------------------------------
+      - name: Python bağımlılıklarını yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+
+      # ---------------------------------------------------------------
+      # 4. GitHub Actions için özel config dosyası oluştur — sadece
+      #    sputnik_en kaynağını aktif eder, kullanıcı parametrelerini
+      #    config.yaml'a yansıtır
+      # ---------------------------------------------------------------
+      - name: GitHub Actions için config oluştur
+        run: |
+          python - <<'PY'
+          import yaml
+          from pathlib import Path
+
+          cfg_path = Path("scripts/config.yaml")
+          cfg = yaml.safe_load(cfg_path.read_text(encoding="utf-8"))
+
+          # Yalnızca Sputnik EN — diğer kaynaklar lokalde çekiliyor
+          cfg["sources"] = ["sputnik_en"]
+
+          # Kullanıcının workflow_dispatch ile verdiği parametreler
+          cfg["date_range"]["start"] = "${{ github.event.inputs.start_date }}"
+          cfg["date_range"]["end"]   = "${{ github.event.inputs.end_date }}"
+
+          # max_articles 0 → sınırsız (tam scraping); aksi halde test sınırı
+          max_n = int("${{ github.event.inputs.max_articles }}")
+          if max_n > 0:
+              cfg["runtime"]["test_mode"] = True
+              cfg["runtime"]["max_per_source_test"] = max_n
+          else:
+              cfg["runtime"]["test_mode"] = False
+              cfg["runtime"]["max_per_source"] = None
+
+          # Çıktı GitHub Actions workspace içinde
+          cfg["paths"]["output_root"] = "../corpus_github"
+
+          cfg_path.write_text(yaml.dump(cfg, allow_unicode=True), encoding="utf-8")
+          print("[config] sources =", cfg["sources"])
+          print("[config] date_range =", cfg["date_range"])
+          print("[config] runtime =", cfg["runtime"])
+          PY
+
+      # ---------------------------------------------------------------
+      # 5. Sputnik EN scraping'i çalıştır
+      # ---------------------------------------------------------------
+      - name: Sputnik EN scraper çalıştır
+        working-directory: scripts
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          python main.py --source sputnik_en
+          echo ""
+          echo "===== ÇIKTI ÖZETİ ====="
+          ls -lh ../corpus_github/sputnik/en/ | head -20
+          echo "Toplam dosya:"
+          ls ../corpus_github/sputnik/en/ | wc -l
+
+      # ---------------------------------------------------------------
+      # 6. Çıktı klasörünü ve log'ları artifact olarak yükle
+      # ---------------------------------------------------------------
+      - name: Korpus + log artifact yükle
+        if: always()   # scraping başarısız olsa bile log'ları al
+        uses: actions/upload-artifact@v4
+        with:
+          name: sputnik-en-corpus-${{ github.run_id }}
+          path: |
+            corpus_github/
+            scripts/logs/
+          retention-days: 30
+
+      # ---------------------------------------------------------------
+      # 7. Workflow özeti — GitHub UI'da görünür
+      # ---------------------------------------------------------------
+      - name: Workflow özeti yaz
+        if: always()
+        run: |
+          echo "## Sputnik EN Scraping — Özet" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Tarih aralığı:** ${{ github.event.inputs.start_date }} → ${{ github.event.inputs.end_date }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Maks makale:** ${{ github.event.inputs.max_articles }} (0 = sınırsız)" >> $GITHUB_STEP_SUMMARY
+          echo "**Run ID:** ${{ github.run_id }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -d corpus_github/sputnik/en ]; then
+            count=$(ls corpus_github/sputnik/en/ | wc -l)
+            echo "**Çekilen JSON dosyası sayısı:** $count" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Uyarı:** corpus_github/sputnik/en/ bulunamadı" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Sıradaki adım" >> $GITHUB_STEP_SUMMARY
+          echo "1. Bu sayfanın altındaki **Artifacts** bölümünden \`sputnik-en-corpus-${{ github.run_id }}\` zip'ini indirin" >> $GITHUB_STEP_SUMMARY
+          echo "2. Lokal makinede: \`py scripts/merge_github_artifacts.py PATH/sputnik-en-corpus-${{ github.run_id }}.zip\`" >> $GITHUB_STEP_SUMMARY
